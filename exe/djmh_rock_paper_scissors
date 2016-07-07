@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'djmh_rock_paper_scissors'
+
+DjmhRockPaperScissors::Game.new.play

@@ -5,6 +5,5 @@ require 'djmh_rock_paper_scissors/human'
 require 'djmh_rock_paper_scissors/computer'
 
 module DjmhRockPaperScissors
-  game = DjmhRockPaperScissors::Game.new
-  game.play
+
 end
