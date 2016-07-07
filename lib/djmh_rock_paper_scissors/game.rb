@@ -7,14 +7,31 @@ module DjmhRockPaperScissors
     # compare choices
     # print message depending on choice (tie? won?)
 
+    #Human and Computer classes inherit from Player
+    #both need their own get_move methods
+
     def initialize 
       welcome_message
-
+      initialize_players
     end 
 
     def welcome_message 
       puts "Welcome to the game! How many players?"
+    end
+
+    def initialize_players
       num_players = gets.chomp
+      if num_players=="1"
+        @player_1=Human.new
+        @player_2=Computer.new
+      elsif num_players == "2"
+        @player_1=Human.new
+        @player_2=Human.new
+      end
+    end
+
+    def play
+      @player_1.get_move
     end
 
   end
