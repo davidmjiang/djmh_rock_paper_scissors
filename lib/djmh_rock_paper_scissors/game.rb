@@ -10,6 +10,13 @@ module DjmhRockPaperScissors
     #Human and Computer classes inherit from Player
     #both need their own get_move methods
 
+    KEY = {
+      "rock" => "scissors",
+      "paper" => "rock",
+      "scissors" => "paper"
+    }
+    #keys defeat values
+
     def initialize 
       welcome_message
       initialize_players
@@ -32,7 +39,7 @@ module DjmhRockPaperScissors
 
     def play
       @player_1.turn
-      puts @player_1.move
+      @player_2.turn
     end
 
   end
