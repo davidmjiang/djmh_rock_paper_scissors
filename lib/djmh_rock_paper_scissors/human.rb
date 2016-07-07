@@ -1,6 +1,7 @@
 module DjmhRockPaperScissors
   class Human < Player
-    def get_move
+
+    def get_move()
       prompt_user
       input=gets.chomp.downcase
       input if valid_move?(input)
@@ -8,11 +9,11 @@ module DjmhRockPaperScissors
 
     def turn 
       super 
-      puts "You chose #{@move}."
+      puts "Player #{@player_number} chose #{@move}."
     end
 
     def prompt_user
-      puts "Rock, paper, or scissors?"
+      puts "Player #{@player_number}: Rock, paper, or scissors?"
     end
 
     private

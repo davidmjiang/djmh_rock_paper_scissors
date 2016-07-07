@@ -1,15 +1,16 @@
 module DjmhRockPaperScissors
   class Computer < Player
+
     def get_move
       arr = %w[rock paper scissors]
       arr.sample      
     end
 
     def print_choice
-      puts "Computer chose #{@move}"
+      puts "Player #{@player_number} chose #{@move}"
     end
 
-    def get_move
+    def turn
       super
       print_choice
     end
