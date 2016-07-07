@@ -31,7 +31,8 @@ module DjmhRockPaperScissors
     end
 
     def play
-      @player_1.get_move
+      @player_1.turn
+      puts @player_1.move
     end
 
   end
